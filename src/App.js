@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import Auth from "./Auth"
 import Login from "./Components/Login"
+import Dashboard from "./Components/Dashboard";
 // import AuthButton from "./Components/AuthButton";
 
 Auth.checkToken();
@@ -21,7 +22,7 @@ function App() {
       <div>
         {/*<AuthButton/>*/}
         <Route path="/login" component={Login}/>
-        <PrivateRoute path="/" component={() => <h2>Welcome!</h2>}/>
+        <PrivateRoute path="/" component={Dashboard}/>
         <PrivateRoute path="/protected" component={() => <h2>Protected!</h2>}/>
       </div>
     </Router>

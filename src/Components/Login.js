@@ -2,7 +2,6 @@ import React from "react";
 import {Redirect} from "react-router-dom"
 import Auth from "../Auth";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Avatar from "@material-ui/core/Avatar";
@@ -11,6 +10,7 @@ import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import {withStyles} from "@material-ui/core/styles";
 import LockIcon from '@material-ui/icons/Lock';
+import Copyright from "./Copyright";
 
 const styles = theme => ({
   '@global': {
@@ -92,6 +92,10 @@ class Login extends React.Component {
               name="email"
               autoComplete="email"
               autoFocus
+              defaultValue={"fahrybaharudin@gmail.com"}
+              InputProps={{
+                readOnly: true,
+              }}
             />
             <TextField
               variant="outlined"
@@ -103,6 +107,10 @@ class Login extends React.Component {
               type="password"
               id="password"
               autoComplete="current-password"
+              defaultValue={"password"}
+              InputProps={{
+                readOnly: true,
+              }}
             />
             {
               this.state.error !== ""
@@ -123,14 +131,7 @@ class Login extends React.Component {
           </form>
         </div>
         <Box mt={8}>
-          <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-              EdukaCloud
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-          </Typography>
+          <Copyright/>
         </Box>
       </Container>
     );
