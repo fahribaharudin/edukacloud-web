@@ -40,6 +40,14 @@ const Auth = {
     if (access_token != null && refresh_token != null) {
       this.isAuthenticated = true;
     }
+  },
+  getAccessToken() {
+    const access_token = Cookie.get("access_token") ? Cookie.get("access_token") : null;
+    const refresh_token = Cookie.get("refresh_token") ? Cookie.get("refresh_token") : null;
+
+    return {
+      access_token, refresh_token
+    }
   }
 };
 

@@ -27,7 +27,7 @@ const Welcome = () => {
       <Grid item xs={12} md={12} lg={12}>
         <Paper className={fixedHeightPaper}>
           <Typography variant={"h5"} align={"center"} color={"primary"}>
-            Welcome to EdukaCloud, Admin!
+            Welcome to Dashboard, Admin!
           </Typography>
           <Typography variant={"body1"} align={"center"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Typography>
         </Paper>
