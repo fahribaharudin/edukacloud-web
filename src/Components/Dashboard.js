@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import {Route} from "react-router-dom";
+import {makeStyles} from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -14,11 +15,13 @@ import Container from '@material-ui/core/Container';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import SideMenu from "./SideMenu";
+
+import DashboardSideMenu from "./Navigation/DashboardSideMenu";
 import Copyright from "./Copyright";
-import {Route} from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import Mahasiswa from "./Pages/Mahasiswa";
+import Dosen from "./Pages/Dosen";
+import MataKuliah from "./Pages/MataKuliah";
 
 const drawerWidth = 240;
 
@@ -126,7 +129,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Sistem Akademik - Pascasarjana UNSIQ
+            Sistem Akademik Pascasarjana UNSIQ
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -148,14 +151,15 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        <SideMenu/>
+        <DashboardSideMenu/>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Route path={"/"} exact component={Welcome}/>
           <Route path={"/mahasiswa"} exact component={Mahasiswa}/>
-          <Route path={"/dosen"} exact component={Mahasiswa}/>
+          <Route path={"/dosen"} exact component={Dosen}/>
+          <Route path={"/mata-kuliah"} exact component={MataKuliah}/>
         </Container>
         <Copyright />
       </main>

@@ -1,6 +1,6 @@
 import React from "react";
 import {Redirect} from "react-router-dom"
-import Auth from "../Auth";
+import Auth from "../../Auth";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import {withStyles} from "@material-ui/core/styles";
 import LockIcon from '@material-ui/icons/Lock';
-import Copyright from "./Copyright";
+import Copyright from "../Copyright";
 
 const styles = theme => ({
   '@global': {
