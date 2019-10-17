@@ -29,7 +29,7 @@ const AuthButton = withRouter(({ history }) => (
 
 const DashboardSideMenu = () => (
   <List>
-    <ListSubheader inset>Base Data</ListSubheader>
+    <ListSubheader inset>Akademik</ListSubheader>
     <ListItem component={NavLink} to={"/mahasiswa"}>
       <ListItemIcon>
         <PeopleAltIcon/>
@@ -49,7 +49,7 @@ const DashboardSideMenu = () => (
       <ListItemText primary="Mata Kuliah" />
     </ListItem>
     <Divider/>
-    <ListSubheader inset>Akademis</ListSubheader>
+    <ListSubheader inset>KRS</ListSubheader>
     <ListItem component={NavLink} to={"/kelas-kuliah"}>
       <ListItemIcon>
         <AppsIcon/>
@@ -60,7 +60,7 @@ const DashboardSideMenu = () => (
       <ListItemIcon>
         <AppsIcon/>
       </ListItemIcon>
-      <ListItemText primary="Jadwal Kuliah" />
+      <ListItemText primary="Peserta Kuliah" />
     </ListItem>
     <Divider/>
     <ListSubheader inset>Operations</ListSubheader>

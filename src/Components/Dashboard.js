@@ -22,6 +22,7 @@ import Welcome from "./Pages/Welcome";
 import Mahasiswa from "./Pages/Mahasiswa";
 import Dosen from "./Pages/Dosen";
 import MataKuliah from "./Pages/MataKuliah";
+import KelasKuliah from "./Pages/KelasKuliah";
 
 const drawerWidth = 240;
 
@@ -160,6 +161,7 @@ export default function Dashboard() {
           <Route path={"/mahasiswa"} exact component={Mahasiswa}/>
           <Route path={"/dosen"} exact component={Dosen}/>
           <Route path={"/mata-kuliah"} exact component={MataKuliah}/>
+          <Route path={"/kelas-kuliah"} exact component={KelasKuliah}/>
         </Container>
         <Copyright />
       </main>
